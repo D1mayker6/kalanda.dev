@@ -19,13 +19,20 @@
         <div class="loader-line"></div>
     </div>
 </div>
+
     <!-- ШАПКА / НАВИГАЦИЯ -->
     <header class="navbar" id="navbar">
         <div class="container nav-container">
-            <a href="#about" class="nav-link">Обо мне</a>
-            <a href="#skills" class="nav-link">Скиллы и инструменты</a>
-            <a href="#projects" class="nav-link">Проекты</a>
-            <a href="#contacts" class="nav-link">Обратная связь</a>
+            <a href="#about" class="nav-link" data-i18n="nav_about">Обо мне</a>
+            <a href="#skills" class="nav-link" data-i18n="nav_skills">Скиллы и инструменты</a>
+            <a href="#projects" class="nav-link" data-i18n="nav_projects">Проекты</a>
+            <a href="#contacts" class="nav-link" data-i18n="nav_contacts">Обратная связь</a>
+            
+            <!-- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА -->
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="ru">RU</button>
+                <button class="lang-btn" data-lang="en">ENG</button>
+            </div>
         </div>
     </header>
 
@@ -33,13 +40,13 @@
     <section id="about">
         <div class="container">
             <div class="about-grid">
-                <div class="vertical-title">Обо мне</div>
+                <div class="vertical-title" data-i18n="about_title">Обо мне</div>
                 <div class="about-text">
-                    <p>Меня зовут <strong>Дима</strong> и в 20 лет я создаю цифровые миры.</p>
-                    <p><strong>Моя основа</strong> – это чистый код на C# и мощь Unity. Я убежден, что сила геймдева – на стыке технологий и искусства.</p>
-                    <p><strong>Я не просто разработчик.</strong> Я – харизматичный инициатор, отзывчивый командный игрок и трудолюбивый исполнитель.</p>
-                    <p><strong>Моя цель</strong> – не просто писать скрипты, а вместе с вами создавать продукты, в которые хочется верить. Готов воплотить нашу следующую большую идею.</p>
-                    <p><strong>Давайте сделаем это вместе!</strong></p>
+                    <p data-i18n="about_p1">Меня зовут <strong>Дима</strong> и в 20 лет я создаю цифровые миры.</p>
+                    <p data-i18n="about_p2"><strong>Моя основа</strong> – это чистый код на C# и мощь Unity. Я убежден, что сила геймдева – на стыке технологий и искусства.</p>
+                    <p data-i18n="about_p3"><strong>Я не просто разработчик.</strong> Я – харизматичный инициатор, отзывчивый командный игрок и трудолюбивый исполнитель.</p>
+                    <p data-i18n="about_p4"><strong>Моя цель</strong> – не просто писать скрипты, а вместе с вами создавать продукты, в которые хочется верить. Готов воплотить нашу следующую большую идею.</p>
+                    <p data-i18n="about_p5"><strong>Давайте сделаем это вместе!</strong></p>
                 </div>
                 <div class="about-photo-wrapper">
                     <img src="images/photo.jpg" alt="Дима — Unity Developer" onerror="this.src='https://via.placeholder.com/400x500/1a1a1a/ffffff?text=Photo';">
@@ -51,16 +58,16 @@
     <!-- СЕКЦИЯ 2: СКИЛЛЫ И ОБРАЗОВАНИЕ -->
     <section id="skills">
         <div class="container">
-            <h2 class="section-main-title">Скиллы и инструменты</h2>
+            <h2 class="section-main-title" data-i18n="skills_title">Скиллы и инструменты</h2>
             
-            <h3 class="education-subtitle">Образование</h3>
+            <h3 class="education-subtitle" data-i18n="edu_title">Образование</h3>
             <div class="education-timeline">
                 <div class="edu-line"></div>
                 <div class="edu-nodes">
 				<div class="edu-node">
 					<div class="edu-year">2022 — 2026</div>
 					<div class="square-icon"></div>
-					<div class="edu-text">Полоцкий государственный экономический колледж</div>
+					<div class="edu-text" data-i18n="edu_place">Полоцкий государственный экономический колледж</div>
 				</div>
                 </div>
             </div>
@@ -91,7 +98,7 @@
                         <div class="csharp-row">
                             <div class="black-card csharp-badge">
                                 <span class="csharp-title">C#</span>
-                                <span class="csharp-subtitle">язык программирования</span>
+                                <span class="csharp-subtitle" data-i18n="csharp_sub">язык программирования</span>
                             </div>
                             <ul class="black-square-list">
                                 <li>Async / Multithreading</li>
@@ -106,7 +113,7 @@
                         <div class="bottom-row">
                             <ul class="black-square-list">
                                 <li>Blender</li>
-                                <li>Реляционные БД</li>
+                                <li data-i18n="skill_db">Реляционные БД</li>
                                 <li>Illustrator</li>
                                 <li>Photoshop</li>
                                 <li>Rest API</li>
@@ -114,7 +121,7 @@
 
                             <div class="white-solid-card">
                                 <h3 class="solid-title">S.O.L.I.D.</h3>
-                                <p class="solid-desc">– мой стандарт качества разработки</p>
+                                <p class="solid-desc" data-i18n="solid_desc">– мой стандарт качества разработки</p>
                             </div>
                         </div>
 
@@ -127,31 +134,31 @@
                             
                             <div class="quality-node">
                                 <span class="node-square"></span>
-                                <span class="quality-text">работа в команде</span>
+                                <span class="quality-text" data-i18n="q_teamwork">работа в команде</span>
                             </div>
                             <div class="quality-node">
                                 <span class="node-square"></span>
-                                <span class="quality-text">обучаемость</span>
+                                <span class="quality-text" data-i18n="q_learning">обучаемость</span>
                             </div>
                             <div class="quality-node">
                                 <span class="node-square"></span>
-                                <span class="quality-text">ответственность</span>
+                                <span class="quality-text" data-i18n="q_responsibility">ответственность</span>
                             </div>
                             <div class="quality-node">
                                 <span class="node-square"></span>
-                                <span class="quality-text">внимательность</span>
+                                <span class="quality-text" data-i18n="q_attention">внимательность</span>
                             </div>
                             <div class="quality-node">
                                 <span class="node-square"></span>
-                                <span class="quality-text">усидчивость</span>
+                                <span class="quality-text" data-i18n="q_perseverance">усидчивость</span>
                             </div>
                             <div class="quality-node">
                                 <span class="node-square"></span>
-                                <span class="quality-text">креативность</span>
+                                <span class="quality-text" data-i18n="q_creativity">креативность</span>
                             </div>
                         </div>
 
-                        <div class="vertical-header">
+                        <div class="vertical-header" data-i18n="qualities_title">
                             Личные качества
                         </div>
                     </div>
@@ -164,7 +171,7 @@
     <!-- СЕКЦИЯ 3: ПРОЕКТЫ -->
     <section id="projects">
         <div class="container">
-            <h2 class="section-main-title">Выполненные проекты</h2>
+            <h2 class="section-main-title" data-i18n="projects_title">Выполненные проекты</h2>
 
             <div class="projects-timeline">
                 
@@ -179,11 +186,11 @@
                         </div>
                         <div class="project-body">
                             <div class="project-title">Distortion</div>
-                            <div class="project-genre">Жанр: <span>Платформер</span></div>
-                            <div class="project-genre">Технология: <span>Game Maker 2</span></div>							
+                            <div class="project-genre"><span data-i18n="lbl_genre">Жанр:</span> <span data-i18n="g_platformer">Платформер</span></div>
+                            <div class="project-genre"><span data-i18n="lbl_tech">Технология:</span> <span>Game Maker 2</span></div>							
                             <div class="project-buttons">
 							<a href="https://youtu.be/VBOBaS2g3uE" target="_blank">
-								<button class="btn">Видео</button>
+								<button class="btn" data-i18n="btn_video">Видео</button>
 							</a>         
 							<a href="https://k-land-game-studio.itch.io/distortion" target="_blank">
 								<button class="btn">Itch.io</button>
@@ -201,11 +208,11 @@
                         </div>
                         <div class="project-body">
                             <div class="project-title" style="color: #f1c40f;">Line Of Thorns (old)</div>
-                            <div class="project-genre">Жанр: <span>Аркада / Раннер</span></div>
-							<div class="project-genre">Технология: <span>SFML C++</span></div>	
+                            <div class="project-genre"><span data-i18n="lbl_genre">Жанр:</span> <span data-i18n="g_runner">Аркада / Раннер</span></div>
+							<div class="project-genre"><span data-i18n="lbl_tech">Технология:</span> <span>SFML C++</span></div>	
                             <div class="project-buttons">
 							<a href="https://youtu.be/kvkbaOmOIPU" target="_blank">
-								<button class="btn">Видео</button>
+								<button class="btn" data-i18n="btn_video">Видео</button>
 							</a>         
                             </div>
                         </div>
@@ -222,12 +229,12 @@
                             <img src="images/energy_choice.png" alt="МОЙ ЭНЕРГО ВЫБОР! Logo" onerror="this.src='https://via.placeholder.com/1920x1080/1a1a1a/ffffff?text=%D0%AD%D0%BD%D0%B5%D1%80%D0%B3%D0%BE+%D0%92%D1%8B%D0%B1%D0%BE%D1%80+1920x1080';">
                         </div>
                         <div class="project-body">
-                            <div class="project-title" style="color: #2ecc71;">МОЙ ЭНЕРГОВЫБОР!</div>
-                            <div class="project-genre">Жанр: <span>Настольная / Образовательная</span></div>
-							<div class="project-genre">Технология: <span>Unity 2022</span></div>
+                            <div class="project-title" style="color: #2ecc71;" data-i18n="proj_energy">МОЙ ЭНЕРГОВЫБОР!</div>
+                            <div class="project-genre"><span data-i18n="lbl_genre">Жанр:</span> <span data-i18n="g_board">Настольная / Образовательная</span></div>
+							<div class="project-genre"><span data-i18n="lbl_tech">Технология:</span> <span>Unity 2022</span></div>
                             <div class="project-buttons">
 								<a href="https://youtu.be/rpyvInFLNFM" target="_blank">
-									<button class="btn">Видео</button>
+									<button class="btn" data-i18n="btn_video">Видео</button>
 								</a>         
                             </div>
                         </div>
@@ -242,11 +249,11 @@
                         </div>
                         <div class="project-body">
                             <div class="project-title" style="color: #e74c3c;">ROCK DOG</div>
-                            <div class="project-genre">Жанр: <span>Ритм-экшен</span></div>
-							<div class="project-genre">Технология: <span>Unreal Engine 5</span></div>
+                            <div class="project-genre"><span data-i18n="lbl_genre">Жанр:</span> <span data-i18n="g_rhythm">Ритм-экшен</span></div>
+							<div class="project-genre"><span data-i18n="lbl_tech">Технология:</span> <span>Unreal Engine 5</span></div>
                             <div class="project-buttons">
 								<a href="https://youtu.be/G133FAvu0Us?si=LyZ1XgX453X_kLZp" target="_blank">
-									<button class="btn">Видео</button>
+									<button class="btn" data-i18n="btn_video">Видео</button>
 								</a>         
 								<a href="https://store.steampowered.com/app/4008700/RockDog/" target="_blank">
 									<button class="btn">Steam</button>
@@ -267,11 +274,11 @@
                         </div>
                         <div class="project-body">
                             <div class="project-title" style="color: #3498db;">ACADEMIC ODYSSEY</div>
-                            <div class="project-genre">Жанр: <span>2D Платформер / RPG</span></div>
-							<div class="project-genre">Технология: <span>Unity 6</span></div>
+                            <div class="project-genre"><span data-i18n="lbl_genre">Жанр:</span> <span data-i18n="g_rpg">2D Платформер / RPG</span></div>
+							<div class="project-genre"><span data-i18n="lbl_tech">Технология:</span> <span>Unity 6</span></div>
                             <div class="project-buttons">
 								<a href="https://youtu.be/60nom86rChw" target="_blank">
-									<button class="btn">Видео</button>
+									<button class="btn" data-i18n="btn_video">Видео</button>
 								</a>         
                             </div>
                         </div>
@@ -280,7 +287,7 @@
 				
 				<div class="timeline-year">2026</div>
 				
-				    <div class="project-row left">
+				<div class="project-row left">
                     <div class="timeline-node-point"></div>
                     <div class="project-card">
                         <div class="project-img-wrapper">
@@ -288,14 +295,14 @@
                         </div>
                         <div class="project-body">
                             <div class="project-title" style="color: #e74c3c;">Line of Thorns (new)</div>
-                            <div class="project-genre">Жанр: <span>Аркада / Раннер</span></div>
-							<div class="project-genre">Технология: <span>Unity 6</span></div>
+                            <div class="project-genre"><span data-i18n="lbl_genre">Жанр:</span> <span data-i18n="g_runner">Аркада / Раннер</span></div>
+							<div class="project-genre"><span data-i18n="lbl_tech">Технология:</span> <span>Unity 6</span></div>
                             <div class="project-buttons">
 								<a href="https://youtu.be/lyNI-kRCNCo" target="_blank">
-									<button class="btn">Видео</button>
+									<button class="btn" data-i18n="btn_video">Видео</button>
 								</a>         
 								<a href="https://yandex.ru/games/app/598175?draft=true&lang=ru" target="_blank">
-									<button class="btn">Yandes.Games</button>
+									<button class="btn">Yandex.Games</button>
 								</a> 
 								<a href="https://k-land-game-studio.itch.io/line-of-thorns" target="_blank">
 									<button class="btn">Itch.io</button>
@@ -312,7 +319,7 @@
 <!-- СЕКЦИЯ 4: КОНТАКТЫ -->
 <section id="contacts">
     <div class="container contacts-wrapper">
-        <h2 class="section-main-title">Свяжитесь со мной</h2>
+        <h2 class="section-main-title" data-i18n="contacts_title">Свяжитесь со мной</h2>
 
         <div class="qr-grid">
             <div class="qr-card">
@@ -339,8 +346,9 @@
     </div>
 </section>
 
-    <!-- СКРИПТ ПОЯВЛЕНИЯ МЕНЮ ПРИ СКРОЛЛЕ -->
+    <!-- СКРИПТЫ: МЕНЮ, ПРЕЛУДЕР И МУЛЬТИЯЗЫЧНОСТЬ -->
     <script>
+        // --- 1. СКРИПТ ПРЕЛОАДЕРА И НАВИГАЦИИ ---
         const navbar = document.getElementById('navbar');
 
         window.addEventListener('scroll', () => {
@@ -350,12 +358,125 @@
                 navbar.classList.remove('visible');
             }
         });
-		window.addEventListener('load', () => {
-        // Минимальная задержка 400мс, чтобы заставка успела красиво отработать
-        setTimeout(() => {
-            document.body.classList.add('loaded');
-        }, 400);
-    });
+        
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.body.classList.add('loaded');
+            }, 400);
+        });
+
+        // --- 2. СКРИПТ ПЕРЕВОДА (i18n) ---
+        const translations = {
+            ru: {
+                nav_about: "Обо мне",
+                nav_skills: "Скиллы и инструменты",
+                nav_projects: "Проекты",
+                nav_contacts: "Обратная связь",
+
+                about_title: "Обо мне",
+                about_p1: "Меня зовут <strong>Дима</strong> и в 20 лет я создаю цифровые миры.",
+                about_p2: "<strong>Моя основа</strong> – это чистый код на C# и мощь Unity. Я убежден, что сила геймдева – на стыке технологий и искусства.",
+                about_p3: "<strong>Я не просто разработчик.</strong> Я – харизматичный инициатор, отзывчивый командный игрок и трудолюбивый исполнитель.",
+                about_p4: "<strong>Моя цель</strong> – не просто писать скрипты, а вместе с вами создавать продукты, в которые хочется верить. Готов воплотить нашу следующую большую идею.",
+                about_p5: "<strong>Давайте сделаем это вместе!</strong>",
+
+                skills_title: "Скиллы и инструменты",
+                edu_title: "Образование",
+                edu_place: "Полоцкий государственный экономический колледж",
+                csharp_sub: "язык программирования",
+                skill_db: "Реляционные БД",
+                solid_desc: "– мой стандарт качества разработки",
+
+                qualities_title: "Личные качества",
+                q_teamwork: "работа в команде",
+                q_learning: "обучаемость",
+                q_responsibility: "ответственность",
+                q_attention: "внимательность",
+                q_perseverance: "усидчивость",
+                q_creativity: "креативность",
+
+                projects_title: "Выполненные проекты",
+                lbl_genre: "Жанр:",
+                lbl_tech: "Технология:",
+                g_platformer: "Платформер",
+                g_runner: "Аркада / Раннер",
+                g_board: "Настольная / Образовательная",
+                g_rhythm: "Ритм-экшен",
+                g_rpg: "2D Платформер / RPG",
+                proj_energy: "МОЙ ЭНЕРГОВЫБОР!",
+                btn_video: "Видео",
+
+                contacts_title: "Свяжитесь со мной"
+            },
+            en: {
+                nav_about: "About Me",
+                nav_skills: "Skills & Tools",
+                nav_projects: "Projects",
+                nav_contacts: "Contacts",
+
+                about_title: "About Me",
+                about_p1: "My name is <strong>Dima</strong>, and at 20 years old, I create digital worlds.",
+                about_p2: "<strong>My foundation</strong> is clean C# code and the power of Unity. I believe that game dev's true strength lies at the intersection of technology and art.",
+                about_p3: "<strong>I am not just a developer.</strong> I am a charismatic initiator, a supportive team player, and a dedicated worker.",
+                about_p4: "<strong>My goal</strong> is not just to write scripts, but to create products together that people believe in. Ready to bring our next big idea to life.",
+                about_p5: "<strong>Let's do this together!</strong>",
+
+                skills_title: "Skills & Tools",
+                edu_title: "Education",
+                edu_place: "Polotsk State Economic College",
+                csharp_sub: "programming language",
+                skill_db: "Relational DBs",
+                solid_desc: "– my development quality standard",
+
+                qualities_title: "Personal Qualities",
+                q_teamwork: "teamwork",
+                q_learning: "fast learner",
+                q_responsibility: "responsibility",
+                q_attention: "attention to detail",
+                q_perseverance: "perseverance",
+                q_creativity: "creativity",
+
+                projects_title: "Completed Projects",
+                lbl_genre: "Genre:",
+                lbl_tech: "Technology:",
+                g_platformer: "Platformer",
+                g_runner: "Arcade / Runner",
+                g_board: "Board / Educational",
+                g_rhythm: "Rhythm Action",
+                g_rpg: "2D Platformer / RPG",
+                proj_energy: "MY ENERGY CHOICE!",
+                btn_video: "Video",
+
+                contacts_title: "Get in Touch"
+            }
+        };
+
+        function setLanguage(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+            });
+
+            document.documentElement.lang = lang;
+            localStorage.setItem('preferred_lang', lang);
+        }
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const lang = btn.getAttribute('data-lang');
+                setLanguage(lang);
+            });
+        });
+
+        // Загрузка сохранённого языка или использование 'ru' по умолчанию
+        const savedLang = localStorage.getItem('preferred_lang') || 'ru';
+        setLanguage(savedLang);
     </script>
 </body>
 </html>
