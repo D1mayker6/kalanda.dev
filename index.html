@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dmitry Kalanda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="apple-touch-icon" href="images/icon.png">
+</head>
+<body>
+<!-- ЭКРАН-ЗАСТАВКА (PRELOADER) -->
+<div id="preloader">
+    <div class="loader-content">
+        <div class="loader-logo">Dmitry Kalanda</div>
+        <div class="loader-line"></div>
+    </div>
+</div>
+    <!-- ШАПКА / НАВИГАЦИЯ -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#about" class="nav-link">Обо мне</a>
+            <a href="#skills" class="nav-link">Скиллы и инструменты</a>
+            <a href="#projects" class="nav-link">Проекты</a>
+            <a href="#contacts" class="nav-link">Обратная связь</a>
+        </div>
+    </header>
+
+    <!-- СЕКЦИЯ 1: ОБО МНЕ -->
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="vertical-title">Обо мне</div>
+                <div class="about-text">
+                    <p>Меня зовут <strong>Дима</strong> и в 20 лет я создаю цифровые миры.</p>
+                    <p><strong>Моя основа</strong> – это чистый код на C# и мощь Unity. Я убежден, что сила геймдева – на стыке технологий и искусства.</p>
+                    <p><strong>Я не просто разработчик.</strong> Я – харизматичный инициатор, отзывчивый командный игрок и трудолюбивый исполнитель.</p>
+                    <p><strong>Моя цель</strong> – не просто писать скрипты, а вместе с вами создавать продукты, в которые хочется верить. Готов воплотить нашу следующую большую идею.</p>
+                    <p><strong>Давайте сделаем это вместе!</strong></p>
+                </div>
+                <div class="about-photo-wrapper">
+                    <img src="images/photo.jpg" alt="Дима — Unity Developer" onerror="this.src='https://via.placeholder.com/400x500/1a1a1a/ffffff?text=Photo';">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ 2: СКИЛЛЫ И ОБРАЗОВАНИЕ -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-main-title">Скиллы и инструменты</h2>
+            
+            <h3 class="education-subtitle">Образование</h3>
+            <div class="education-timeline">
+                <div class="edu-line"></div>
+                <div class="edu-nodes">
+				<div class="edu-node">
+					<div class="edu-year">2022 — 2026</div>
+					<div class="square-icon"></div>
+					<div class="edu-text">Полоцкий государственный экономический колледж</div>
+				</div>
+                </div>
+            </div>
+
+            <!-- BENTO SKILLS BLOCK -->
+            <div class="bento-container-white">
+                <div class="bento-grid">
+                    
+                    <!-- ЛЕВАЯ КОЛОНКА -->
+                    <div class="bento-left">
+                        
+                        <!-- 1. Unity Block -->
+                        <div class="black-card unity-card">
+                            <div class="unity-brand">
+                                <img class="unity-logo" src="images/unity.png"></img>
+                                <span class="unity-text">Unity</span>
+                            </div>
+                            <ul class="white-dot-list">
+                                <li>Addressables</li>
+                                <li>Profiler & Debugger</li>
+                                <li>UI Toolkit</li>
+                                <li>UniTask & UniRx</li>
+                                <li>Zenject / VContainer</li>
+                            </ul>
+                        </div>
+
+                        <!-- 2. C# Row -->
+                        <div class="csharp-row">
+                            <div class="black-card csharp-badge">
+                                <span class="csharp-title">C#</span>
+                                <span class="csharp-subtitle">язык программирования</span>
+                            </div>
+                            <ul class="black-square-list">
+                                <li>Async / Multithreading</li>
+                                <li>Memory & GC Optimization</li>
+                                <li>Delegates & Events</li>
+                                <li>Generics & Collections</li>
+                                <li>LINQ & Reflection</li>
+                            </ul>
+                        </div>
+
+                        <!-- 3. Bottom Row -->
+                        <div class="bottom-row">
+                            <ul class="black-square-list">
+                                <li>Blender</li>
+                                <li>Реляционные БД</li>
+                                <li>Illustrator</li>
+                                <li>Photoshop</li>
+                                <li>Rest API</li>
+                            </ul>
+
+                            <div class="white-solid-card">
+                                <h3 class="solid-title">S.O.L.I.D.</h3>
+                                <p class="solid-desc">– мой стандарт качества разработки</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- ПРАВАЯ КОЛОНКА (Личные качества) -->
+                    <div class="black-card personal-qualities-card">
+                        <div class="qualities-timeline">
+                            <div class="timeline-line"></div>
+                            
+                            <div class="quality-node">
+                                <span class="node-square"></span>
+                                <span class="quality-text">работа в команде</span>
+                            </div>
+                            <div class="quality-node">
+                                <span class="node-square"></span>
+                                <span class="quality-text">обучаемость</span>
+                            </div>
+                            <div class="quality-node">
+                                <span class="node-square"></span>
+                                <span class="quality-text">ответственность</span>
+                            </div>
+                            <div class="quality-node">
+                                <span class="node-square"></span>
+                                <span class="quality-text">внимательность</span>
+                            </div>
+                            <div class="quality-node">
+                                <span class="node-square"></span>
+                                <span class="quality-text">усидчивость</span>
+                            </div>
+                            <div class="quality-node">
+                                <span class="node-square"></span>
+                                <span class="quality-text">креативность</span>
+                            </div>
+                        </div>
+
+                        <div class="vertical-header">
+                            Личные качества
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ 3: ПРОЕКТЫ -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-main-title">Выполненные проекты</h2>
+
+            <div class="projects-timeline">
+                
+                <!-- 2023 -->
+                <div class="timeline-year">2023</div>
+
+                <div class="project-row right">
+                    <div class="timeline-node-point"></div>
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="images/distortion.png" alt="Distortion Logo" onerror="this.src='https://via.placeholder.com/1920x1080/1a1a1a/ffffff?text=Distortion+1920x1080';">
+                        </div>
+                        <div class="project-body">
+                            <div class="project-title">Distortion</div>
+                            <div class="project-genre">Жанр: <span>Платформер</span></div>
+                            <div class="project-genre">Технология: <span>Game Maker 2</span></div>							
+                            <div class="project-buttons">
+                                <button class="btn">Трейлер</button>
+                                <button class="btn">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-row left">
+                    <div class="timeline-node-point"></div>
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="images/line_of_thorns_old.png" alt="LINE & THORNS Logo" onerror="this.src='https://via.placeholder.com/1920x1080/1a1a1a/ffffff?text=LINE+%26+THORNS+1920x1080';">
+                        </div>
+                        <div class="project-body">
+                            <div class="project-title" style="color: #f1c40f;">Line Of Thorns (old)</div>
+                            <div class="project-genre">Жанр: <span>Аркада / Раннер</span></div>
+							<div class="project-genre">Технология: <span>SFML C++</span></div>	
+                            <div class="project-buttons">
+                                <button class="btn">Трейлер</button>
+                                <button class="btn">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2024 -->
+                <div class="timeline-year">2024</div>
+
+                <div class="project-row right">
+                    <div class="timeline-node-point"></div>
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="images/energy_choice.png" alt="МОЙ ЭНЕРГО ВЫБОР! Logo" onerror="this.src='https://via.placeholder.com/1920x1080/1a1a1a/ffffff?text=%D0%AD%D0%BD%D0%B5%D1%80%D0%B3%D0%BE+%D0%92%D1%8B%D0%B1%D0%BE%D1%80+1920x1080';">
+                        </div>
+                        <div class="project-body">
+                            <div class="project-title" style="color: #2ecc71;">МОЙ ЭНЕРГО ВЫБОР!</div>
+                            <div class="project-genre">Жанр: <span>Обучающий квест</span></div>
+							<div class="project-genre">Технология: <span>Unity 2022</span></div>
+                            <div class="project-buttons">
+                                <button class="btn">Трейлер</button>
+                                <button class="btn">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-row left">
+                    <div class="timeline-node-point"></div>
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="images/rock_dog.png" alt="ROCK DOG Logo" onerror="this.src='https://via.placeholder.com/1920x1080/1a1a1a/ffffff?text=ROCK+DOG+1920x1080';">
+                        </div>
+                        <div class="project-body">
+                            <div class="project-title" style="color: #e74c3c;">ROCK DOG</div>
+                            <div class="project-genre">Жанр: <span>Ритм-экшен</span></div>
+							<div class="project-genre">Технология: <span>Unreal Engine 5</span></div>
+                            <div class="project-buttons">
+                                <button class="btn">Трейлер</button>
+                                <button class="btn">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2025 -->
+                <div class="timeline-year">2025</div>
+
+                <div class="project-row right">
+                    <div class="timeline-node-point"></div>
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="images/academic_odyssey.png" alt="ACADEMIC ODYSSEY Logo" onerror="this.src='https://via.placeholder.com/1920x1080/1a1a1a/ffffff?text=Academic+Odyssey+1920x1080';">
+                        </div>
+                        <div class="project-body">
+                            <div class="project-title" style="color: #3498db;">ACADEMIC ODYSSEY</div>
+                            <div class="project-genre">Жанр: <span>2D Платформер / RPG</span></div>
+							<div class="project-genre">Технология: <span>Unity 6</span></div>
+                            <div class="project-buttons">
+                                <button class="btn">Трейлер</button>
+                                <button class="btn">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				
+				<div class="timeline-year">2026</div>
+				
+				    <div class="project-row left">
+                    <div class="timeline-node-point"></div>
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="images/line_of_thorns_new.png" alt="Line of Thorns new Logo" onerror="this.src='https://via.placeholder.com/1920x1080/1a1a1a/ffffff?text=ROCK+DOG+1920x1080';">
+                        </div>
+                        <div class="project-body">
+                            <div class="project-title" style="color: #e74c3c;">Line of Thorns (new)</div>
+                            <div class="project-genre">Жанр: <span>Аркада / Раннер</span></div>
+							<div class="project-genre">Технология: <span>Unity 6</span></div>
+                            <div class="project-buttons">
+                                <button class="btn">Трейлер</button>
+                                <button class="btn">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<!-- СЕКЦИЯ 4: КОНТАКТЫ -->
+<section id="contacts">
+    <div class="container contacts-wrapper">
+        <h2 class="section-main-title">Свяжитесь со мной</h2>
+
+        <div class="qr-grid">
+            <div class="qr-card">
+                <a href="https://www.linkedin.com/in/dmitry-kalanda-374a15386/" target="_blank" class="qr-box">
+                    <img src="images/linkedin.png" alt="LinkedIn">
+                </a>
+                <span class="contact-label">LinkedIn</span>
+            </div>
+
+            <div class="qr-card">
+                <a href="https://github.com/D1mayker6" target="_blank" class="qr-box">
+                    <img src="images/git.png" alt="GitHub">
+                </a>
+                <span class="contact-label">GitHub</span>
+            </div>
+
+            <div class="qr-card">
+                <a href="https://t.me/d1mayker6" target="_blank" class="qr-box">
+                    <img src="images/tg.png" alt="Telegram">
+                </a>
+                <span class="contact-label">Telegram</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- СКРИПТ ПОЯВЛЕНИЯ МЕНЮ ПРИ СКРОЛЛЕ -->
+    <script>
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('visible');
+            } else {
+                navbar.classList.remove('visible');
+            }
+        });
+		window.addEventListener('load', () => {
+        // Минимальная задержка 400мс, чтобы заставка успела красиво отработать
+        setTimeout(() => {
+            document.body.classList.add('loaded');
+        }, 400);
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,864 @@
+        /* --- СБРОС И БАЗОВЫЕ СТИЛИ --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Merriweather', Georgia, serif;
+            line-height: 1.75;
+            overflow-x: hidden;
+            font-size: 19px;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 90px 0;
+        }
+
+        /* --- НАВИГАЦИЯ --- */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-20px);
+            transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
+        }
+
+        .navbar.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #aaaaaa;
+        }
+
+        /* --- СЕКЦИЯ 1: ОБО МНЕ --- */
+        #about {
+            padding-top: 140px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 80px 1fr 400px;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .vertical-title {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 64px;
+            font-weight: 900;
+            text-transform: uppercase;
+            white-space: nowrap;
+            letter-spacing: 2px;
+        }
+
+        .about-text {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            font-size: 20px;
+        }
+
+        .about-text strong {
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .about-photo-wrapper {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            background-color: #1a1a1a;
+            border: 2px solid #ffffff;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-photo-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* --- СЕКЦИЯ 2: ОБРАЗОВАНИЕ & СКИЛЛЫ --- */
+        .section-main-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 52px;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        .education-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: #ffffff;
+        }
+
+        .education-timeline {
+            position: relative;
+            margin-bottom: 60px;
+        }
+
+		.edu-line {
+			width: 100%;
+			height: 2px;
+			background-color: #ffffff;
+			position: absolute;
+			top: 43px; 
+			left: 0;
+			z-index: 1;
+		}
+
+        .edu-nodes {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+        }
+
+		.edu-node {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			max-width: 360px;
+			text-align: center;
+			font-size: 19px;
+			cursor: default;
+		}
+		
+		.edu-text {
+			display: inline-block;
+			transition: transform 0.3s ease;
+		}
+		
+		.edu-node:hover .edu-text {
+			transform: scale(1.08);
+		}
+
+		.edu-year {
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: 20px;
+			color: #ffffff;
+			margin-bottom: 12px;
+			line-height: 1;
+		}
+
+        .square-icon {
+            width: 24px;
+            height: 24px;
+            background-color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        /* --- BENTO SKILLS GRID --- */
+        .bento-container-white {
+            background-color: #ffffff;
+            padding: 28px;
+            font-family: 'Montserrat', sans-serif;
+            max-width: 1100px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            color: #000000;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 24px;
+        }
+
+        .bento-left {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .black-card {
+            background-color: #000000;
+            color: #ffffff;
+            box-sizing: border-box;
+        }
+
+        .unity-card {
+            display: flex;
+            align-items: center;
+            padding: 28px 36px;
+            gap: 48px;
+        }
+
+        .unity-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .unity-logo {
+            width: 120px;
+            height: 80px;
+        }
+
+        .unity-text {
+            font-size: 28px;
+            font-weight: 700;
+            margin-top: 6px;
+        }
+
+        .white-dot-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .white-dot-list li {
+            font-size: 20px;
+            font-weight: 400;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+        }
+
+        .white-dot-list li::before {
+            content: "•";
+            font-size: 24px;
+            margin-right: 12px;
+            line-height: 1;
+            color: #ffffff;
+        }
+
+        .csharp-row {
+            display: grid;
+            grid-template-columns: 210px 1fr;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .csharp-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px 10px;
+            text-align: center;
+        }
+
+        .csharp-title {
+            font-size: 56px;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .csharp-subtitle {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 8px;
+        }
+
+        .black-square-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .black-square-list li {
+            font-size: 19px;
+            font-weight: 400;
+            color: #000000;
+            display: flex;
+            align-items: center;
+        }
+
+        .black-square-list li::before {
+            content: "";
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            background-color: #000000;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        .bottom-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        .white-solid-card {
+            background-color: #ffffff;
+            border: 2px solid #000000;
+            color: #000000;
+            padding: 20px 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .solid-title {
+            font-size: 26px;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            margin: 0;
+            color: #000000;
+        }
+
+        .solid-desc {
+            font-size: 16px;
+            font-weight: 400;
+            margin-top: 6px;
+            line-height: 1.35;
+            color: #000000;
+        }
+
+        .personal-qualities-card {
+            padding: 40px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .qualities-timeline {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 36px;
+            padding-left: 20px;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 27px;
+            top: -10px;
+            bottom: -10px;
+            width: 3px;
+            background-color: #ffffff;
+            z-index: 1;
+        }
+
+        .quality-node {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .node-square {
+            width: 16px;
+            height: 16px;
+            background-color: #ffffff;
+            flex-shrink: 0;
+        }
+
+        .quality-text {
+            font-size: 22px;
+            font-weight: 400;
+            color: #ffffff;
+        }
+
+        .vertical-header {
+            writing-mode: vertical-rl;
+            font-size: 38px;
+            font-weight: 900;
+            color: #ffffff;
+            white-space: nowrap;
+            user-select: none;
+        }
+
+        /* --- СЕКЦИЯ 3: ПРОЕКТЫ (ОБНОВЛЕННЫЙ ФОРМАТ КАРТОЧЕК) --- */
+		.projects-timeline {
+			position: relative;
+			max-width: 1000px;
+			margin: 0 auto;
+			padding: 40px 0;
+		}
+		
+		.projects-timeline::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 50%;
+			width: 2px;
+			background: linear-gradient(to bottom, 
+			rgba(255, 255, 255, 0.2) 0%, 
+			rgba(255, 255, 255, 0.2) 80%, 
+			transparent 100%);
+			transform: translateX(-50%);
+			z-index: 1;
+		}
+
+
+        .timeline-year {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 48px;
+            font-weight: 900;
+            margin: 40px 0 30px 0;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            background-color: #000000;
+            display: inline-block;
+            padding: 0 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #ffffff;
+        }
+
+		.project-row {
+			position: relative;
+			display: flex;
+			align-items: center;
+			margin-bottom: 60px;
+			width: 100%;
+		}
+
+		.project-row.left {
+			justify-content: flex-start;
+		}
+
+		.project-row.right {
+			justify-content: flex-end;
+		}
+		
+		.project-row.right .timeline-node-point::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 100%;
+			width: calc(100% + 8vw); /* Длина луча до карточки */
+			height: 2px;
+			background: linear-gradient(90deg, #ffffff, rgba(255, 255, 255, 0.1));
+			box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+			transform: translateY(-50%);
+			pointer-events: none;
+		}
+		
+		.project-row.left .timeline-node-point::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 100%;
+			width: calc(100% + 8vw);
+			height: 2px;
+			background: linear-gradient(-90deg, #ffffff, rgba(255, 255, 255, 0.1));
+			box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+			transform: translateY(-50%);
+			pointer-events: none;
+		}
+
+		.project-card {
+			position: relative;
+			width: 42%; /* Оставляем отступ до центра для луча */
+			z-index: 2;
+			transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s ease;
+			will-change: transform; /* Включает оптимизацию GPU для исключения микрофризов */
+		}
+		.project-card:hover {
+			transform: scale(1.03) translateY(-4px); /* Легкое увеличение и подъем */
+			z-index: 10; /* Карточка перекрывает соседние элементы при увеличении */
+			box-shadow: 0 12px 30px rgba(255, 255, 255, 0.15); /* Мягкое свечение */
+		}
+
+        /* Превью изображения 1920х1080 (Соотношение 16:9) */
+        .project-img-wrapper {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background-color: #111111;
+            border-bottom: 2px solid #ffffff;
+            overflow: hidden;
+        }
+
+        .project-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-body {
+            padding: 24px;
+        }
+
+        .project-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 26px;
+            font-weight: 900;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .project-genre {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #aaaaaa;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .project-genre span {
+            color: #ffffff;
+        }
+
+        .project-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 10px 20px;
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: opacity 0.2s, background-color 0.2s, color 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.85;
+        }
+
+		.timeline-node-point {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 14px;
+			height: 14px;
+			background-color: #ffffff;
+			border: 2px solid #000;
+			box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+			transform: translate(-50%, -50%) rotate(45deg); /* Поворот для формы ромба/квадрата */
+			z-index: 3;
+		}
+
+		.timeline-end-node {
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 12px;
+			height: 12px;
+			background: #fff;
+			border-radius: 50%;
+			margin-top: 20px;
+	}
+	
+		.timeline-end-node::after {
+			content: '';
+			position: absolute;
+			top: -4px;
+			left: -4px;
+			right: -4px;
+			bottom: -4px;
+			border: 2px solid rgba(255, 255, 255, 0.8);
+			border-radius: 50%;
+			animation: radar-pulse 2s infinite ease-out;
+	}
+	
+		@keyframes radar-pulse {
+		0% {
+			transform: scale(0.8);
+			opacity: 1;
+		}
+		100% {
+			transform: scale(2.5);
+			opacity: 0;
+		}
+}
+
+        /* --- СЕКЦИЯ 4: КОНТАКТЫ --- */
+        .contacts-wrapper {
+            text-align: center;
+        }
+
+        .qr-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .qr-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+		.qr-box {
+			width: 250px;
+			height: 250px;
+			background-color: #ffffff;
+			padding: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 8px;
+			text-decoration: none;
+			/* Плавный скейл и подъем при наведении */
+			transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
+			will-change: transform;
+		}
+		
+		.qr-box:hover {
+			transform: scale(1.03) translateY(-4px);
+			box-shadow: 0 12px 25px rgba(255, 255, 255, 0.2);
+		}
+
+        .qr-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+		
+		.contact-label {
+			font-family: 'Montserrat', sans-serif;
+			color: #ffffff;
+			font-size: 16px;
+			font-weight: 600;
+			letter-spacing: 0.5px;
+		}
+		
+		/* --- АНИМАЦИЯ ПОЯВЛЕНИЯ И ЗАСТАВКА --- */
+
+/* Запрещаем скролл во время загрузки */
+body:not(.loaded) {
+    overflow: hidden;
+}
+
+/* Экран прелоадера */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #080808;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    /* Эффект ухода заставки вверх с плавным кубическим замедлением */
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.8s ease;
+}
+
+/* Состояние после загрузки — уход вверх */
+body.loaded #preloader {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Пульсирующие инициалы */
+.loader-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 6px;
+    animation: glowPulse 1.2s ease-in-out infinite alternate;
+}
+
+/* Неоновый индикатор загрузки */
+.loader-line {
+    width: 100px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.loader-line::after {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+    animation: loadingBar 1.2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+/* Эффект плавного выплывания элементов сайта снизу */
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+body.loaded section {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ключевые кадры анимаций */
+@keyframes glowPulse {
+    0% {
+        opacity: 0.3;
+        transform: scale(0.96);
+        text-shadow: 0 0 0px rgba(255, 255, 255, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.02);
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    }
+}
+
+@keyframes loadingBar {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+        /* --- АДАПТИВНОСТЬ --- */
+        @media (max-width: 850px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .vertical-title {
+                writing-mode: horizontal-tb;
+                transform: none;
+                font-size: 40px;
+            }
+
+            .bento-grid, .csharp-row, .bottom-row {
+                grid-template-columns: 1fr;
+            }
+
+            .unity-card {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .personal-qualities-card {
+                flex-direction: column;
+                gap: 40px;
+                align-items: flex-start;
+            }
+
+            .vertical-header {
+                writing-mode: horizontal-tb;
+                font-size: 28px;
+            }
+
+            .projects-timeline::before {
+                left: 20px;
+            }
+
+            .timeline-year {
+                left: 20px;
+                transform: none;
+            }
+
+            .project-row {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-left: 40px;
+            }
+			
+			.project-row.left,
+			.project-row.right {
+				justify-content: flex-end;
+			}
+			
+			.project-row.left .timeline-node-point::before,
+			.project-row.right .timeline-node-point::after {
+				left: 100%;
+				right: auto;
+				width: 30px;
+				background: linear-gradient(90deg, #ffffff, rgba(255, 255, 255, 0.1));
+			}
+
+			.project-card {
+				width: calc(100% - 50px);
+			}
+
+            .timeline-node-point {
+                left: 20px;
+            }
+
+            .edu-line {
+                display: none;
+            }
+        }
