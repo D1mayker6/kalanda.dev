@@ -20,21 +20,20 @@
     </div>
 </div>
 
-    <!-- ШАПКА / НАВИГАЦИЯ -->
-    <header class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="#about" class="nav-link" data-i18n="nav_about">Обо мне</a>
-            <a href="#skills" class="nav-link" data-i18n="nav_skills">Скиллы и инструменты</a>
-            <a href="#projects" class="nav-link" data-i18n="nav_projects">Проекты</a>
-            <a href="#contacts" class="nav-link" data-i18n="nav_contacts">Обратная связь</a>
-            
-            <!-- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА -->
-            <div class="lang-switcher">
-                <button class="lang-btn active" data-lang="ru">RU</button>
-                <button class="lang-btn" data-lang="en">ENG</button>
-            </div>
-        </div>
-    </header>
+	<header class="navbar" id="navbar">
+		<div class="container nav-container">
+			<a href="#about" class="nav-link">About</a>
+			<a href="#skills" class="nav-link">Skills</a>
+			<a href="#projects" class="nav-link">Projects</a>
+			<a href="#contacts" class="nav-link">Contacts</a>
+			
+			<!-- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА -->
+			<div class="lang-switcher">
+				<button class="lang-btn active" data-lang="ru">RU</button>
+				<button class="lang-btn" data-lang="en">ENG</button>
+			</div>
+		</div>
+	</header>
 
     <!-- СЕКЦИЯ 1: ОБО МНЕ -->
     <section id="about">
@@ -366,117 +365,106 @@
         });
 
         // --- 2. СКРИПТ ПЕРЕВОДА (i18n) ---
-        const translations = {
-            ru: {
-                nav_about: "Обо мне",
-                nav_skills: "Скиллы и инструменты",
-                nav_projects: "Проекты",
-                nav_contacts: "Обратная связь",
+const translations = {
+    ru: {
+        about_title: "Обо мне",
+        about_p1: "Меня зовут <strong>Дима</strong> и в 20 лет я создаю цифровые миры.",
+        about_p2: "<strong>Моя основа</strong> – это чистый код на C# и мощь Unity. Я убежден, что сила геймдева – на стыке технологий и искусства.",
+        about_p3: "<strong>Я не просто разработчик.</strong> Я – харизматичный инициатор, отзывчивый командный игрок и трудолюбивый исполнитель.",
+        about_p4: "<strong>Моя цель</strong> – не просто писать скрипты, а вместе с вами создавать продукты, в которые хочется верить. Готов воплотить нашу следующую большую идею.",
+        about_p5: "<strong>Давайте сделаем это вместе!</strong>",
 
-                about_title: "Обо мне",
-                about_p1: "Меня зовут <strong>Дима</strong> и в 20 лет я создаю цифровые миры.",
-                about_p2: "<strong>Моя основа</strong> – это чистый код на C# и мощь Unity. Я убежден, что сила геймдева – на стыке технологий и искусства.",
-                about_p3: "<strong>Я не просто разработчик.</strong> Я – харизматичный инициатор, отзывчивый командный игрок и трудолюбивый исполнитель.",
-                about_p4: "<strong>Моя цель</strong> – не просто писать скрипты, а вместе с вами создавать продукты, в которые хочется верить. Готов воплотить нашу следующую большую идею.",
-                about_p5: "<strong>Давайте сделаем это вместе!</strong>",
+        skills_title: "Скиллы и инструменты",
+        edu_title: "Образование",
+        edu_place: "Полоцкий государственный экономический колледж",
+        csharp_sub: "язык программирования",
+        skill_db: "Реляционные БД",
+        solid_desc: "– мой стандарт качества разработки",
 
-                skills_title: "Скиллы и инструменты",
-                edu_title: "Образование",
-                edu_place: "Полоцкий государственный экономический колледж",
-                csharp_sub: "язык программирования",
-                skill_db: "Реляционные БД",
-                solid_desc: "– мой стандарт качества разработки",
+        qualities_title: "Личные качества",
+        q_teamwork: "работа в команде",
+        q_learning: "обучаемость",
+        q_responsibility: "ответственность",
+        q_attention: "внимательность",
+        q_perseverance: "усидчивость",
+        q_creativity: "креативность",
 
-                qualities_title: "Личные качества",
-                q_teamwork: "работа в команде",
-                q_learning: "обучаемость",
-                q_responsibility: "ответственность",
-                q_attention: "внимательность",
-                q_perseverance: "усидчивость",
-                q_creativity: "креативность",
+        projects_title: "Выполненные проекты",
+        lbl_genre: "Жанр:",
+        lbl_tech: "Технология:",
+        g_platformer: "Платформер",
+        g_runner: "Аркада / Раннер",
+        g_board: "Настольная / Образовательная",
+        g_rhythm: "Ритм-экшен",
+        g_rpg: "2D Платформер / RPG",
+        proj_energy: "МОЙ ЭНЕРГОВЫБОР!",
+        btn_video: "Видео",
 
-                projects_title: "Выполненные проекты",
-                lbl_genre: "Жанр:",
-                lbl_tech: "Технология:",
-                g_platformer: "Платформер",
-                g_runner: "Аркада / Раннер",
-                g_board: "Настольная / Образовательная",
-                g_rhythm: "Ритм-экшен",
-                g_rpg: "2D Платформер / RPG",
-                proj_energy: "МОЙ ЭНЕРГОВЫБОР!",
-                btn_video: "Видео",
+        contacts_title: "Свяжитесь со мной"
+    },
+    en: {
+        about_title: "About Me",
+        about_p1: "My name is <strong>Dima</strong>, and at 20 years old, I create digital worlds.",
+        about_p2: "<strong>My foundation</strong> is clean C# code and the power of Unity. I believe that game dev's true strength lies at the intersection of technology and art.",
+        about_p3: "<strong>I am not just a developer.</strong> I am a charismatic initiator, a supportive team player, and a dedicated worker.",
+        about_p4: "<strong>My goal</strong> is not just to write scripts, but to create products together that people believe in. Ready to bring our next big idea to life.",
+        about_p5: "<strong>Let's do this together!</strong>",
 
-                contacts_title: "Свяжитесь со мной"
-            },
-            en: {
-                nav_about: "About Me",
-                nav_skills: "Skills & Tools",
-                nav_projects: "Projects",
-                nav_contacts: "Contacts",
+        skills_title: "Skills & Tools",
+        edu_title: "Education",
+        edu_place: "Polotsk State Economic College",
+        csharp_sub: "programming language",
+        skill_db: "Relational DBs",
+        solid_desc: "– my development quality standard",
 
-                about_title: "About Me",
-                about_p1: "My name is <strong>Dima</strong>, and at 20 years old, I create digital worlds.",
-                about_p2: "<strong>My foundation</strong> is clean C# code and the power of Unity. I believe that game dev's true strength lies at the intersection of technology and art.",
-                about_p3: "<strong>I am not just a developer.</strong> I am a charismatic initiator, a supportive team player, and a dedicated worker.",
-                about_p4: "<strong>My goal</strong> is not just to write scripts, but to create products together that people believe in. Ready to bring our next big idea to life.",
-                about_p5: "<strong>Let's do this together!</strong>",
+        qualities_title: "Personal Qualities",
+        q_teamwork: "teamwork",
+        q_learning: "fast learner",
+        q_responsibility: "responsibility",
+        q_attention: "attention to detail",
+        q_perseverance: "perseverance",
+        q_creativity: "creativity",
 
-                skills_title: "Skills & Tools",
-                edu_title: "Education",
-                edu_place: "Polotsk State Economic College",
-                csharp_sub: "programming language",
-                skill_db: "Relational DBs",
-                solid_desc: "– my development quality standard",
+        projects_title: "Completed Projects",
+        lbl_genre: "Genre:",
+        lbl_tech: "Technology:",
+        g_platformer: "Platformer",
+        g_runner: "Arcade / Runner",
+        g_board: "Board / Educational",
+        g_rhythm: "Rhythm Action",
+        g_rpg: "2D Platformer / RPG",
+        proj_energy: "MY ENERGY CHOICE!",
+        btn_video: "Video",
 
-                qualities_title: "Personal Qualities",
-                q_teamwork: "teamwork",
-                q_learning: "fast learner",
-                q_responsibility: "responsibility",
-                q_attention: "attention to detail",
-                q_perseverance: "perseverance",
-                q_creativity: "creativity",
+        contacts_title: "Get in Touch"
+    }
+};
 
-                projects_title: "Completed Projects",
-                lbl_genre: "Genre:",
-                lbl_tech: "Technology:",
-                g_platformer: "Platformer",
-                g_runner: "Arcade / Runner",
-                g_board: "Board / Educational",
-                g_rhythm: "Rhythm Action",
-                g_rpg: "2D Platformer / RPG",
-                proj_energy: "MY ENERGY CHOICE!",
-                btn_video: "Video",
-
-                contacts_title: "Get in Touch"
-            }
-        };
-
-        function setLanguage(lang) {
-            document.querySelectorAll('[data-i18n]').forEach(element => {
-                const key = element.getAttribute('data-i18n');
-                if (translations[lang] && translations[lang][key]) {
-                    element.innerHTML = translations[lang][key];
-                }
-            });
-
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
-            });
-
-            document.documentElement.lang = lang;
-            localStorage.setItem('preferred_lang', lang);
+function setLanguage(lang) {
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            element.innerHTML = translations[lang][key];
         }
+    });
 
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const lang = btn.getAttribute('data-lang');
-                setLanguage(lang);
-            });
-        });
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
 
-        // Загрузка сохранённого языка или использование 'ru' по умолчанию
-        const savedLang = localStorage.getItem('preferred_lang') || 'ru';
-        setLanguage(savedLang);
+    document.documentElement.lang = lang;
+    localStorage.setItem('preferred_lang', lang);
+}
+
+document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-lang');
+        setLanguage(lang);
+    });
+});
+
+const savedLang = localStorage.getItem('preferred_lang') || 'ru';
+setLanguage(savedLang);
     </script>
 </body>
 </html>
