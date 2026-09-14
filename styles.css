@@ -823,77 +823,221 @@ body.loaded section {
     100% { left: 100%; }
 }
 
-        /* --- АДАПТИВНОСТЬ --- */
-        @media (max-width: 850px) {
-            .about-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
+/* --- АДАПТИВНОСТЬ --- */
 
-            .vertical-title {
-                writing-mode: horizontal-tb;
-                transform: none;
-                font-size: 40px;
-            }
+/* Планшеты и мобильные устройства (до 850px) */
+@media (max-width: 850px) {
+    /* Базовые отступы и шрифты */
+    section {
+        padding: 60px 0;
+    }
 
-            .bento-grid, .csharp-row, .bottom-row {
-                grid-template-columns: 1fr;
-            }
+    #about {
+        padding-top: 100px;
+    }
 
-            .unity-card {
-                flex-direction: column;
-                gap: 20px;
-                text-align: center;
-            }
+    .section-main-title {
+        font-size: 34px;
+        margin-bottom: 40px;
+    }
 
-            .personal-qualities-card {
-                flex-direction: column;
-                gap: 40px;
-                align-items: flex-start;
-            }
+    /* Навигация */
+    .nav-container {
+        gap: 12px 20px;
+        padding: 12px 0;
+    }
 
-            .vertical-header {
-                writing-mode: horizontal-tb;
-                font-size: 28px;
-            }
+    .nav-link {
+        font-size: 14px;
+    }
 
-            .projects-timeline::before {
-                left: 20px;
-            }
+    .lang-switcher {
+        margin-left: 0;
+    }
 
-            .timeline-year {
-                left: 20px;
-                transform: none;
-            }
+    /* Секция 1: Обо мне */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        text-align: center;
+    }
 
-            .project-row {
-                flex-direction: column;
-                align-items: flex-start;
-                margin-left: 40px;
-            }
-			
-			.project-row.left,
-			.project-row.right {
-				justify-content: flex-end;
-			}
-			
-			.project-row.left .timeline-node-point::before,
-			.project-row.right .timeline-node-point::after {
-				left: 100%;
-				right: auto;
-				width: 30px;
-				background: linear-gradient(90deg, #ffffff, rgba(255, 255, 255, 0.1));
-			}
+    .vertical-title {
+        writing-mode: horizontal-tb;
+        transform: none;
+        font-size: 38px;
+        white-space: normal;
+    }
 
-			.project-card {
-				width: calc(100% - 50px);
-			}
+    .about-text {
+        font-size: 17px;
+        text-align: left;
+    }
 
-            .timeline-node-point {
-                left: 20px;
-            }
+    .about-photo-wrapper {
+        max-width: 320px;
+        margin: 0 auto;
+    }
 
-            .edu-line {
-                display: none;
-            }
-        }
+    /* Секция 2: Образование */
+    .education-subtitle {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .edu-line {
+        display: none;
+    }
+
+    .edu-node {
+        max-width: 100%;
+    }
+
+    /* Bento Grid (Скиллы) */
+    .bento-container-white {
+        padding: 18px;
+        border-radius: 8px;
+    }
+
+    .bento-grid, 
+    .csharp-row, 
+    .bottom-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .unity-card {
+        flex-direction: column;
+        padding: 24px 16px;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .csharp-title {
+        font-size: 44px;
+    }
+
+    .white-dot-list li,
+    .black-square-list li {
+        font-size: 16px;
+    }
+
+    .personal-qualities-card {
+        flex-direction: column-reverse;
+        gap: 30px;
+        padding: 24px 16px;
+        align-items: center;
+    }
+
+    .vertical-header {
+        writing-mode: horizontal-tb;
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .qualities-timeline {
+        padding-left: 0;
+    }
+
+    .timeline-line {
+        left: 7px;
+    }
+
+    .quality-text {
+        font-size: 18px;
+    }
+
+    /* Секция 3: Проекты (Временная шкала) */
+    .projects-timeline {
+        padding: 10px 0;
+    }
+
+    /* Главная вертикальная линия слева */
+    .projects-timeline::before {
+        left: 15px;
+        transform: none;
+    }
+
+    /* Заголовок года */
+    .timeline-year {
+        left: 0;
+        transform: none;
+        font-size: 32px;
+        margin: 20px 0;
+        display: inline-block;
+        padding: 0 10px 0 35px;
+    }
+
+    .project-row {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 0;
+        padding-left: 40px;
+        margin-bottom: 40px;
+    }
+
+    .project-row.left,
+    .project-row.right {
+        justify-content: flex-start;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    /* Точки строго на левой линии */
+    .timeline-node-point {
+        left: 15px;
+        top: 24px;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    /* Отключаем боковые лучи на мобильных, чтобы не ломали верстку */
+    .project-row.right .timeline-node-point::after,
+    .project-row.left .timeline-node-point::before {
+        display: none;
+    }
+
+    .timeline-end-node {
+        left: 15px;
+        transform: translateX(-50%);
+    }
+
+    /* Секция 4: Контакты */
+    .qr-box {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Экран малых смартфонов (до 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+
+    .section-main-title {
+        font-size: 26px;
+    }
+
+    .vertical-title {
+        font-size: 30px;
+    }
+
+    .about-text {
+        font-size: 15px;
+    }
+
+    .project-title {
+        font-size: 20px;
+    }
+
+    .project-body {
+        padding: 16px;
+    }
+
+    .qr-box {
+        width: 160px;
+        height: 160px;
+    }
+}
